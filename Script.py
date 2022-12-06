@@ -63,7 +63,7 @@ Note:- Give a user details
 5. /luck or /cownd - 𝚂𝙿𝙸𝙽 𝙰𝙽𝙳 𝚃𝚁𝚈 𝚈𝙾𝚄𝚁 𝙻𝚄𝙲𝙺"""
   
 
-<b>𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙷𝙴 𝐒𝐭𝐚𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 𝐁𝐨𝐭 @itz_movies_bot 𝚁𝙴𝙿𝙾 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 <a href=https://t.me/its_star_boi>𝐒𝐓𝐀𝐑 𓆩🇽𓆪 𝐁𝐎𝐈</a></b>
+<b>𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙷𝙴 𝐒𝐭𝐚𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 𝐁𝐨𝐭 @itz_movies_bot 𝚁𝙴𝙿𝙾 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 <a href=https://t.me/its_star_boi>𝐒𝐓𝐀𝐑 𝐁𝐎𝐈</a></b>
 
 <b>𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴</b>
 𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/Star_x_network><b>💞 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💞</b></a>"""
