@@ -8,48 +8,48 @@ from pyrogram import filters
 load_dotenv()
 
 # Bot information
-SESSION = getenv.get('SESSION', 'Media_search')
+SESSION = getenv('SESSION', 'Media_search')
 API_ID = int(getenv("API_ID", "9751271"))
 API_HASH = getenv("API_HASH", "e87e2408580dd82aa9946b5732db6553")
 BOT_TOKEN = getenv['BOT_TOKEN', '5901655383:AAHJaLkJRdBk8J9OBihd7slkPuAbHP3NwQg']
 
 # Bot settings
-CACHE_TIME = int(getenv.get('CACHE_TIME', 300))
+CACHE_TIME = int(getenv('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(getenv.get('USE_CAPTION_FILTER', False))
-PICS = (getenv.get('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https://telegra.ph/file/b417bdd01331179d5787c.jpg https://telegra.ph/file/775ee57c7a7550ad611ed.jpg')).split()
+PICS = (getenv('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https://telegra.ph/file/b417bdd01331179d5787c.jpg https://telegra.ph/file/775ee57c7a7550ad611ed.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in getenv.get('ADMINS', '5463205082').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in getenv.get('CHANNELS', ' -1001863651025').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in getenv.get('AUTH_USERS', '5463205082').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in getenv('ADMINS', '5463205082').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in getenv('CHANNELS', ' -1001863651025').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in getenv('AUTH_USERS', '5463205082').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = getenv.get('AUTH_CHANNEL', ' -1001863651025')
-auth_grp = getenv.get('AUTH_GROUP', '-1001666282080')
+auth_channel = getenv('AUTH_CHANNEL', ' -1001863651025')
+auth_grp = getenv('AUTH_GROUP', '-1001666282080')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = getenv.get('DATABASE_URI', "mongodb+srv://movies:7234049299@cluster0.mc1he3h.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = getenv.get('DATABASE_NAME', "cluster0")
-COLLECTION_NAME = getenv.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = getenv('DATABASE_URI', "mongodb+srv://movies:7234049299@cluster0.mc1he3h.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = getenv('DATABASE_NAME', "cluster0")
+COLLECTION_NAME = getenv('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(getenv.get('LOG_CHANNEL', '-1001553184345'))
-SUPPORT_CHAT = getenv.get('SUPPORT_CHAT', 'Best_FriendsFor_Ever')
-P_TTI_SHOW_OFF = is_enabled((getenv.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((getenv.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((getenv.get('SINGLE_BUTTON', "False")), False)
-CUSTOM_FILE_CAPTION = getenv.get("CUSTOM_FILE_CAPTION", "📁 ➜ {file_name} @Star_MoviesHub\n🦋 𝗙𝗶𝗿𝘀𝘁 𝗢𝗻 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 🦋\n\n𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 𝐇𝐞𝐫𝐞 𝐀𝐧𝐝 𝐆𝐞𝐭 𝐈𝐧 1 𝐌𝐢𝐧𝐮𝐭𝐞 100℅ 👇\nhttps://t.me/Star_MoviesHub\nयहां अपनी फिल्मों का अनुरोध करें और 1 मिनट में प्राप्त करें 100℅ 👇\nhttps://t.me/Star_MoviesHub\n\n╔══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╗\nᴏғғɪᴄɪᴀʟ @star_x_network\nMᴏᴠɪᴇs @Star_X_Movies\nsᴜᴘᴘᴏʀᴛ @Best_FriendsFor_Ever\n╚══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╝\n✯ ━━━━━ ✧ ━━━━━ ✯")
-BATCH_FILE_CAPTION = getenv.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = getenv.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌IMDb Data by: @Star_X_Network \n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 \n\n♥️ we are nothing without you ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
-LONG_IMDB_DESCRIPTION = is_enabled(getenv.get("LONG_IMDB_DESCRIPTION", "False"), False)
-SPELL_CHECK_REPLY = is_enabled(getenv.get("SPELL_CHECK_REPLY", "True"), False)
+LOG_CHANNEL = int(getenv('LOG_CHANNEL', '-1001553184345'))
+SUPPORT_CHAT = getenv('SUPPORT_CHAT', 'Best_FriendsFor_Ever')
+P_TTI_SHOW_OFF = is_enabled((getenv('P_TTI_SHOW_OFF', "False")), False)
+IMDB = is_enabled((getenv('IMDB', "True")), True)
+SINGLE_BUTTON = is_enabled((getenv('SINGLE_BUTTON', "False")), False)
+CUSTOM_FILE_CAPTION = getenv("CUSTOM_FILE_CAPTION", "📁 ➜ {file_name} @Star_MoviesHub\n🦋 𝗙𝗶𝗿𝘀𝘁 𝗢𝗻 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 🦋\n\n𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 𝐇𝐞𝐫𝐞 𝐀𝐧𝐝 𝐆𝐞𝐭 𝐈𝐧 1 𝐌𝐢𝐧𝐮𝐭𝐞 100℅ 👇\nhttps://t.me/Star_MoviesHub\nयहां अपनी फिल्मों का अनुरोध करें और 1 मिनट में प्राप्त करें 100℅ 👇\nhttps://t.me/Star_MoviesHub\n\n╔══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╗\nᴏғғɪᴄɪᴀʟ @star_x_network\nMᴏᴠɪᴇs @Star_X_Movies\nsᴜᴘᴘᴏʀᴛ @Best_FriendsFor_Ever\n╚══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╝\n✯ ━━━━━ ✧ ━━━━━ ✯")
+BATCH_FILE_CAPTION = getenv("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
+IMDB_TEMPLATE = getenv("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌IMDb Data by: @Star_X_Network \n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 \n\n♥️ we are nothing without you ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
+LONG_IMDB_DESCRIPTION = is_enabled(getenv("LONG_IMDB_DESCRIPTION", "False"), False)
+SPELL_CHECK_REPLY = is_enabled(getenv("SPELL_CHECK_REPLY", "True"), False)
 MAX_LIST_ELM = getenv.get("MAX_LIST_ELM", None)
-INDEX_REQ_CHANNEL = int(getenv.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (getenv.get('FILE_STORE_CHANNEL', '')).split()]
-MELCOW_NEW_USERS = is_enabled((getenv.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((getenv.get('PROTECT_CONTENT', "True")), False)
-PUBLIC_FILE_STORE = is_enabled((getenv.get('PUBLIC_FILE_STORE', "False")), False)
+INDEX_REQ_CHANNEL = int(getenv('INDEX_REQ_CHANNEL', LOG_CHANNEL))
+FILE_STORE_CHANNEL = [int(ch) for ch in (getenv('FILE_STORE_CHANNEL', '')).split()]
+MELCOW_NEW_USERS = is_enabled((getenv('MELCOW_NEW_USERS', "True")), True)
+PROTECT_CONTENT = is_enabled((getenv('PROTECT_CONTENT', "True")), False)
+PUBLIC_FILE_STORE = is_enabled((getenv('PUBLIC_FILE_STORE', "False")), False)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
