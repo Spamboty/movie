@@ -11,7 +11,7 @@ load_dotenv()
 SESSION = getenv('SESSION', 'Media_search')
 API_ID = int(getenv("API_ID", "9751271"))
 API_HASH = getenv("API_HASH", "e87e2408580dd82aa9946b5732db6553")
-BOT_TOKEN = getenv("BOT_TOKEN', '5901655383:AAHJaLkJRdBk8J9OBihd7slkPuAbHP3NwQg")
+BOT_TOKEN = getenv("BOT_TOKEN", "5901655383:AAHJaLkJRdBk8J9OBihd7slkPuAbHP3NwQg")
 
 # Bot settings
 CACHE_TIME = int(getenv('CACHE_TIME', 300))
