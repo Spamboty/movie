@@ -15,7 +15,7 @@ BOT_TOKEN = getenv("BOT_TOKEN', '5901655383:AAHJaLkJRdBk8J9OBihd7slkPuAbHP3NwQg"
 
 # Bot settings
 CACHE_TIME = int(getenv('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(getenv.get('USE_CAPTION_FILTER', False))
+USE_CAPTION_FILTER = bool(getenv('USE_CAPTION_FILTER', False))
 PICS = (getenv('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https://telegra.ph/file/b417bdd01331179d5787c.jpg https://telegra.ph/file/775ee57c7a7550ad611ed.jpg')).split()
 
 # Admins, Channels & Users
