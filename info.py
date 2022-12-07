@@ -21,9 +21,9 @@ PICS = (getenv('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https
 # Admins, Channels & Users
 ADMINS = int(getenv('ADMINS', '5463205082').split())
 CHANNELS = int(getenv('CHANNELS', ' -1001863651025').split())
-auth_users = int(getenv('AUTH_USERS', '5463205082').split()
-auth_channel = getenv('AUTH_CHANNEL', ' -1001863651025')
-auth_grp = getenv('AUTH_GROUP', '-1001666282080')
+AUTH_USERS = int(getenv('AUTH_USERS', '5463205082').split()
+AUTH_CHANNEL = getenv('AUTH_CHANNEL', ' -1001863651025')
+AUTH_GROUP = getenv('AUTH_GROUP', '-1001666282080')
 
 # MongoDB information
 DATABASE_URI = getenv('DATABASE_URI', "mongodb+srv://movies:7234049299@cluster0.mc1he3h.mongodb.net/?retryWrites=true&w=majority")
