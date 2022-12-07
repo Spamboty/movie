@@ -19,7 +19,7 @@ USE_CAPTION_FILTER = bool(getenv('USE_CAPTION_FILTER', False))
 PICS = (getenv('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https://telegra.ph/file/b417bdd01331179d5787c.jpg https://telegra.ph/file/775ee57c7a7550ad611ed.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = int(getenv('ADMINS', '5463205082').split())
+ADMINS = getenv('ADMINS', '5463205082')
 CHANNELS = int(getenv('CHANNELS', ' -1001863651025').split())
 AUTH_USERS = int(getenv('AUTH_USERS', '5463205082').split())
 AUTH_CHANNEL = int(getenv('AUTH_CHANNEL', ' -1001863651025').split())
