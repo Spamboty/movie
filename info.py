@@ -19,14 +19,11 @@ USE_CAPTION_FILTER = bool(getenv('USE_CAPTION_FILTER', False))
 PICS = (getenv('PICS', 'https://telegra.ph//file/b12246b0780a927bc8190.jpg https://telegra.ph/file/b417bdd01331179d5787c.jpg https://telegra.ph/file/775ee57c7a7550ad611ed.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in getenv('ADMINS', '5463205082').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in getenv('CHANNELS', ' -1001863651025').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in getenv('AUTH_USERS', '5463205082').split()]
-AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+ADMINS = int(getenv('ADMINS', '5463205082').split())
+CHANNELS = int(getenv('CHANNELS', ' -1001863651025').split())
+auth_users = int(getenv('AUTH_USERS', '5463205082').split()]
 auth_channel = getenv('AUTH_CHANNEL', ' -1001863651025')
 auth_grp = getenv('AUTH_GROUP', '-1001666282080')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = getenv('DATABASE_URI', "mongodb+srv://movies:7234049299@cluster0.mc1he3h.mongodb.net/?retryWrites=true&w=majority")
@@ -46,7 +43,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(getenv("LONG_IMDB_DESCRIPTION", "False"), Fal
 SPELL_CHECK_REPLY = is_enabled(getenv("SPELL_CHECK_REPLY", "True"), False)
 MAX_LIST_ELM = getenv.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(getenv('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (getenv('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = int(getenv('FILE_STORE_CHANNEL', '')).split()
 MELCOW_NEW_USERS = is_enabled((getenv('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((getenv('PROTECT_CONTENT', "True")), False)
 PUBLIC_FILE_STORE = is_enabled((getenv('PUBLIC_FILE_STORE', "False")), False)
